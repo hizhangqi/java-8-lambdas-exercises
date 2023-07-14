@@ -1,0 +1,35 @@
+设计模式是软件开发中经过验证的、通用的解决方案模板。以下是一些常见的设计模式：
+
+1:创建型模式（Creational Patterns）：
+    单例模式（Singleton Pattern）
+    工厂模式（Factory Pattern）
+    抽象工厂模式（Abstract Factory Pattern）
+    建造者模式（Builder Pattern）
+    原型模式（Prototype Pattern）
+    结构型模式（Structural Patterns）：
+    适配器模式（Adapter Pattern）
+    桥接模式（Bridge Pattern）
+    组合模式（Composite Pattern）
+    装饰者模式（Decorator Pattern）
+    外观模式（Facade Pattern）
+    享元模式（Flyweight Pattern）
+    代理模式（Proxy Pattern）
+2:行为型模式（Behavioral Patterns）：
+    责任链模式（Chain of Responsibility Pattern）
+    命令模式（Command Pattern）
+    解释器模式（Interpreter Pattern）
+    迭代器模式（Iterator Pattern）
+    中介者模式（Mediator Pattern）
+    备忘录模式（Memento Pattern）
+    观察者模式（Observer Pattern）
+    状态模式（State Pattern）
+    策略模式（Strategy Pattern）
+    模板方法模式（Template Method Pattern）
+    访问者模式（Visitor Pattern）
+3:并发模式（Concurrency Patterns）：
+    保护性暂停模式（Guarded Suspension Pattern）
+    读写锁模式（Read-Write Lock Pattern）
+    同步模式（Synchronization Patterns）
+    线程池模式（Thread Pool Pattern）
+    并行模式（Parallel Patterns）
+需要注意的是，这里列举的只是一些常见的设计模式，实际上还有其他的设计模式存在。每个设计模式都有其特定的应用场景和解决问题的方式，可以根据具体的需求选择适当的模式来应用。设计模式的目的是提供可复用的、灵活的、可维护的解决方案，有助于提高代码的可读性、可扩展性和可重用性。
