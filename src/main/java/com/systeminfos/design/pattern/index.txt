@@ -6,7 +6,7 @@
     抽象工厂模式（Abstract Factory Pattern）
     建造者模式（Builder Pattern）
     原型模式（Prototype Pattern）
-    结构型模式（Structural Patterns）：
+2:结构型模式（Structural Patterns）：
     适配器模式（Adapter Pattern）
     桥接模式（Bridge Pattern）
     组合模式（Composite Pattern）
@@ -14,7 +14,7 @@
     外观模式（Facade Pattern）
     享元模式（Flyweight Pattern）
     代理模式（Proxy Pattern）
-2:行为型模式（Behavioral Patterns）：
+3:行为型模式（Behavioral Patterns）：
     责任链模式（Chain of Responsibility Pattern）
     命令模式（Command Pattern）
     解释器模式（Interpreter Pattern）
@@ -26,7 +26,7 @@
     策略模式（Strategy Pattern）
     模板方法模式（Template Method Pattern）
     访问者模式（Visitor Pattern）
-3:并发模式（Concurrency Patterns）：
+4:并发模式（Concurrency Patterns）：
     保护性暂停模式（Guarded Suspension Pattern）
     读写锁模式（Read-Write Lock Pattern）
     同步模式（Synchronization Patterns）
