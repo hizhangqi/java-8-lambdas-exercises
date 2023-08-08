@@ -47,6 +47,4 @@ public class Paxos {
         return highestProposalValue;
     }
 
-
-
 }
