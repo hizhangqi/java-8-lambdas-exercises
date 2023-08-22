@@ -39,7 +39,8 @@ public class MatrixSolution {
         for (int i = 0; i < total; i++) {
             order.add(matrix[row][column]);
             visited[row][column] = true;
-            int nextRow = row + directions[directionIndex][0], nextColumn = column + directions[directionIndex][1];
+            int nextRow = row + directions[directionIndex][0];
+            int nextColumn = column + directions[directionIndex][1];
             if (nextRow < 0 || nextRow >= rows || nextColumn < 0 || nextColumn >= columns || visited[nextRow][nextColumn]) {
                 directionIndex = (directionIndex + 1) % 4;
             }
