@@ -42,10 +42,13 @@ public class ShowMeBugMatrix {
 
         int[][] solution = bug.solution(matrix);
         List<int[]> list = Arrays.asList(solution);
-        list.stream().forEach(e -> System.out.println(e));
         list.stream().forEach(e -> {
-
+            Arrays.stream(e).forEach(f -> System.out.print(f + " "));
+            System.out.println();
         });
+//1 4
+//2 5
+//3 6
     }
 
 }
