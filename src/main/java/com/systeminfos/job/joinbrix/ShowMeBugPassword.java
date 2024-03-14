@@ -15,8 +15,8 @@ public class ShowMeBugPassword {
     public String solution1(String password) {
         String result = "weak";
         password = password == null ? "" : password;
-        int lenght = password.length();
-        if (lenght < 8 || lenght > 22) {
+        int passwordLength = password.length();
+        if (passwordLength < 8 || passwordLength > 22) {
             return result;
         }
 
