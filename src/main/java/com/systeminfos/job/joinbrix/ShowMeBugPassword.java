@@ -19,19 +19,19 @@ public class ShowMeBugPassword {
         if (lenght < 8 || lenght > 22) {
             return result;
         }
-        //数字+大小写字母
-        String regex = "[a-zA-Z0-9]{8,22}";
-        boolean passd = password.matches(regex);
 
         Map<String, Long> keyCountMap = Arrays.stream(password.split("")).collect(Collectors.groupingBy(e -> e, Collectors.counting()));
         long count = keyCountMap.values().stream().filter(e -> e >= 3).count();
         if (count > 0) {
             return result;
         }
+
         String lowerCase = password.toLowerCase();
         String upperCase = password.toUpperCase();
-
-        if (passd && !password.equals(lowerCase) && !password.equals(upperCase)) {
+        //数字+大小写字母
+        String regex = "[a-zA-Z0-9]{8,22}";
+        boolean matches = password.matches(regex);
+        if (matches && !password.equals(lowerCase) && !password.equals(upperCase)) {
             return "strong";
         }
         return result;
