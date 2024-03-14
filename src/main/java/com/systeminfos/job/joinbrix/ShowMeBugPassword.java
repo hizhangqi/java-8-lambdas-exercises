@@ -21,8 +21,8 @@ public class ShowMeBugPassword {
         }
 
         Map<String, Long> keyCountMap = Arrays.stream(password.split("")).collect(Collectors.groupingBy(e -> e, Collectors.counting()));
-        long count = keyCountMap.values().stream().filter(e -> e >= 3).count();
-        if (count > 0) {
+        long errorKeyCount = keyCountMap.values().stream().filter(e -> e >= 3).count();
+        if (errorKeyCount > 0) {
             return result;
         }
 
