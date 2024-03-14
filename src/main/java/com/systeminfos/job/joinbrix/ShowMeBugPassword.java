@@ -40,11 +40,13 @@ public class ShowMeBugPassword {
     public static void main(String[] args) {
         ShowMeBugPassword password = new ShowMeBugPassword();
 //        System.out.println(password.solution1("abcdefgH1"));
+        System.out.println(password.solution1("!@#abcdefgH1"));
 //        System.out.println(password.solution1("abcdefgh123456"));
 //        System.out.println(password.solution1("abcdefgh123456"));
 //        System.out.println(password.solution1("Abcdefgh1234561234567890"));
         System.out.println(password.solution1("Abcdefgh123456AbA"));
         System.out.println(password.solution1("Abcdefgh123456cbA"));
+        System.out.println(password.solution1("!Abcdefgh123456cbA"));
     }
 
 }
