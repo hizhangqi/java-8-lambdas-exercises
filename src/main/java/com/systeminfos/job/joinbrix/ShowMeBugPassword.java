@@ -16,7 +16,7 @@ public class ShowMeBugPassword {
         String result = "weak";
         password = password == null ? "" : password;
         int lenght = password.length();
-        if (lenght < 8 && lenght > 22) {
+        if (lenght < 8 || lenght > 22) {
             return result;
         }
         //数字+大小写字母
@@ -31,10 +31,8 @@ public class ShowMeBugPassword {
         String lowerCase = password.toLowerCase();
         String upperCase = password.toUpperCase();
 
-        if (!password.equals(lowerCase) && !password.equals(upperCase)) {
-            if (passd) {
-                return "strong";
-            }
+        if (passd && !password.equals(lowerCase) && !password.equals(upperCase)) {
+            return "strong";
         }
         return result;
     }
