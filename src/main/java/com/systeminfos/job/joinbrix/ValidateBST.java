@@ -26,7 +26,7 @@ public class ValidateBST {
 
     // 递归函数，判断以当前节点为根的子树是否为有效的二叉搜索树
     private boolean isValidBST(TreeNode node, Integer lower, Integer upper) {
-        System.out.println(Objects.isNull(node) ? -1 : node.val);
+        System.out.println("node:" + (Objects.isNull(node) ? -1 : node.val) + ":lower:" + lower + ":uppper:" + upper);
 
         // 递归终止条件，如果当前节点为空，说明子树是一个有效的二叉搜索树
         if (node == null) {
