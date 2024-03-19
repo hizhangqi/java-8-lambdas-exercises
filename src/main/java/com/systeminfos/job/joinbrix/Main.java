@@ -8,9 +8,31 @@ import java.util.stream.Collectors;
 
 class Main {
 
+    /**
+     * 最小字符串集合
+     * Input: new String[] {"ahffaksfajeeubsne", "jefaa"}
+     * Output: aksfaje
+     * Input: new String[] {"aaffhkksemckelloe", "fhea"}
+     * Output: affhkkse
+     *
+     * @param strArr
+     * @return
+     */
     public static String MinWindowSubstring(String[] strArr) {
-        // code goes here
-        return strArr[0];
+        String strProxy = "";
+        String firstStr = strArr[0].trim();
+        String secondStr = strArr[1].trim();
+
+        if (secondStr.equals("")) {
+            return strProxy;
+        }
+
+        Map<String, Long> firstKeyCountMap = Arrays.stream(firstStr.split("")).collect(Collectors.groupingBy(e -> e, Collectors.counting()));
+
+        for (int i = 0; i < secondStr.length(); i++) {
+
+        }
+        return strProxy;
     }
 
     public static String NonrepeatingCharacter(String str) {
@@ -45,8 +67,8 @@ class Main {
     public static void main(String[] args) {
         // keep this function call here
         Scanner s = new Scanner(System.in);
-//    System.out.print(MinWindowSubstring(s.nextLine().split(" ")));
-        System.out.println(ss(s.nextLine()));
+//        System.out.println(ss(s.nextLine()));
+        System.out.print(MinWindowSubstring(s.nextLine().split(" ")));
     }
 
 }
