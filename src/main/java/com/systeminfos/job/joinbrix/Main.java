@@ -1,6 +1,7 @@
 package com.systeminfos.job.joinbrix;
 
 import joptsimple.internal.Strings;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -64,11 +65,25 @@ class Main {
         return strProxy;
     }
 
+    public static void intCompare() {
+        Integer i1 = 1000;
+        Integer i2 = 1000;
+        Integer i3 = -128; //-128 --> 127
+        Integer i4 = -128; //-128 --> 127
+
+        System.out.println(i1 != i2);
+        System.out.println(i1 == i2); //false
+        System.out.println(i1.equals(i2));
+        System.out.println(i4 == i3); //true
+        System.out.println(i4 != i3);
+    }
+
     public static void main(String[] args) {
         // keep this function call here
         Scanner s = new Scanner(System.in);
 //        System.out.println(ss(s.nextLine()));
-        System.out.print(MinWindowSubstring(s.nextLine().split(" ")));
+//        System.out.print(MinWindowSubstring(s.nextLine().split(" ")));
+        intCompare();
     }
 
 }
