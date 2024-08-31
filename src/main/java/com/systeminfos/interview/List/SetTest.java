@@ -92,6 +92,10 @@ public class SetTest {
         int i = 4;
         System.out.println(i << 1);
         System.out.println(i >> 1);
+
+        long sumOfPowers2 = IntStream.rangeClosed(1, 30).mapToLong(j -> (long) Math.pow(2, j)).sum();
+        System.out.println("2 的 1 到 30 次方的和是: " + sumOfPowers2);
+
     }
 
 
