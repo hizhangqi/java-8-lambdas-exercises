@@ -3,9 +3,11 @@ package com.systeminfos.interview.List;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class SetTest {
     public static void main(String[] args) {
@@ -67,6 +69,29 @@ public class SetTest {
             }
         }
         return result;
+    }
+
+
+    /**
+     * 2 的 1 到 30 次方的和 采礼数
+     */
+    @Test
+    public void test2MonthSquareSum() {
+        long sumOfPowers = 0;
+        for (int i = 1; i <= 30; i++) {
+            sumOfPowers += Math.pow(2, i);
+        }
+        System.out.println("2 的 1 到 30 次方的和是: " + sumOfPowers);
+        System.out.println("2 的 1 到 30 次方的和是: " + sumOfPowers / 1000 + " 元");
+        System.out.println("2 的 1 到 30 次方的和是: " + sumOfPowers / (1000 * 1000) + " 万元");
+
+
+        int sum = IntStream.rangeClosed(1, 30).map(i -> 1 << i).sum();
+        System.out.println("Sum of 2^1 to 2^30 is: " + sum);
+
+        int i = 4;
+        System.out.println(i << 1);
+        System.out.println(i >> 1);
     }
 
 
