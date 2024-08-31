@@ -73,7 +73,7 @@ public class SetTest {
 
 
     /**
-     * 2 的 1 到 30 次方的和 采礼数
+     * 2 的 1 到 30 次方的和 彩礼数
      */
     @Test
     public void test2MonthSquareSum() {
