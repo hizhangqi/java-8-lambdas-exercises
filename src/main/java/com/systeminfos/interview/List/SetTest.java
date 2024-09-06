@@ -95,7 +95,33 @@ public class SetTest {
 
         long sumOfPowers2 = IntStream.rangeClosed(1, 30).mapToLong(j -> (long) Math.pow(2, j)).sum();
         System.out.println("2 的 1 到 30 次方的和是: " + sumOfPowers2);
+    }
 
+    @Test
+    public void testGetMinMaxValue() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 4, 10);
+        // 求最大值
+        int max = numbers.stream().max(Integer::compare).get();
+        // 求最小值
+        int min = numbers.stream().min(Integer::compare).get();
+        long otherNums = numbers.stream().filter(e -> e != max && e != min).count();
+        System.out.println("min:" + min + " max:" + max + " otherNums:" + otherNums);
+    }
+
+    @Test
+    public void testGetGroupDate() {
+        String accessLogs = "2024-01-01 01:01:01 /actionUrl\n" + "2024-01-01 01:02:01 /actionUrl\n" + "2024-01-01 01:03:01 /actionUrl\n" + "2024-01-01 01:04:01 /actionUrl";
+        String regex = "\n";
+        String[] split = accessLogs.split(regex);
+
+        Map<String, String> dateMap = new HashMap<>();
+
+        Arrays.stream(split).forEach(e -> {
+            String[] dateSplit = e.split("\\s");
+            System.out.println(dateSplit);
+            String key =
+            dateMap.put(dateSplit[0] + dateSplit[1], dateSplit[2]);
+        });
     }
 
 
