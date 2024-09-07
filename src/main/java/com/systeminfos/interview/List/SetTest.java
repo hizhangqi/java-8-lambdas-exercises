@@ -110,18 +110,35 @@ public class SetTest {
 
     @Test
     public void testGetGroupDate() {
+        //介绍URL 相同
         String accessLogs = "2024-01-01 01:01:01 /actionUrl\n" + "2024-01-01 01:02:01 /actionUrl\n" + "2024-01-01 01:03:01 /actionUrl\n" + "2024-01-01 01:04:01 /actionUrl";
         String regex = "\n";
         String[] split = accessLogs.split(regex);
 
-        Map<String, String> dateMap = new HashMap<>();
+        Map<String, List<String>> dateMap = new HashMap<>();
+        Map<String, Integer> dateCountMap = new HashMap<>();
 
         Arrays.stream(split).forEach(e -> {
             String[] dateSplit = e.split("\\s");
-            System.out.println(dateSplit);
-            String key =
-            dateMap.put(dateSplit[0] + dateSplit[1], dateSplit[2]);
+            String key = dateSplit[0] + dateSplit[1];
+            if (dateMap.containsKey(key)) {
+                dateMap.get(key).add(dateSplit[2]);
+            } else {
+                List<String> urlList = new ArrayList<>();
+                urlList.add(dateSplit[2]);
+                dateMap.put(key, urlList);
+            }
         });
+
+        dateMap.forEach((k, v) -> {
+            dateCountMap.put(k, v.size());
+        });
+
+        //排序
+
+
+
+
     }
 
 
