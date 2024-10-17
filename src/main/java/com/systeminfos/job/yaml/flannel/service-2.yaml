@@ -5,7 +5,7 @@ metadata:
   name: service-2
 spec:
   selector:
-    app: backend
+    app: frontend
   ports:
     - protocol: TCP
       port: 80
