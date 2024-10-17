@@ -1,0 +1,9 @@
+# pod-1.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-1
+spec:
+  containers:
+    - name: nginx
+      image: harbor.systeminfos.com/library/nginx:ping

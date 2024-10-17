@@ -1,0 +1,14 @@
+#service-2.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-2
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+
