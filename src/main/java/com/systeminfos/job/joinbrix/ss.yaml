@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  ports:
+  - port: 80
+    name: web
+  selector:
+    app: nginx
+---
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  selector:
+  matchLabels:
+    app: nginx
+  replicas: 2 # 告知 Deployment 运行 2 个与该模板匹配的 Pod
+  template:
+    metadata:
+  labels:
+    app: nginx
+    spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      name: web

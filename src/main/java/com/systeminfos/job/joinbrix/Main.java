@@ -1,7 +1,6 @@
 package com.systeminfos.job.joinbrix;
 
 import joptsimple.internal.Strings;
-import org.junit.jupiter.api.Test;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
