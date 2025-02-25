@@ -6,11 +6,11 @@ package com.systeminfos.leetcode;
  * @author: zhangqi
  * @date: 2024/01/22
  */
-public class TakeRain {
+public class _42_TakeRain {
     public static void main(String[] args) {
         int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        TakeRain takeRain = new TakeRain();
-        System.out.println(takeRain.trap(height));
+        _42_TakeRain a42TakeRain = new _42_TakeRain();
+        System.out.println(a42TakeRain.trap(height));
     }
 
     private int trap(int[] height) {
