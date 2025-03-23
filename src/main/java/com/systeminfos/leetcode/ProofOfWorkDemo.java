@@ -20,7 +20,7 @@ public class ProofOfWorkDemo {
         } while (!hash.startsWith(String.format("%0" + DIFFICULTY + "d", 0)));
 
         long endTime = System.currentTimeMillis();
-d
+
         System.out.println("✅ 挖矿成功！");
         System.out.println("⛏️ 计算次数: " + nonce);
         System.out.println("🔑 找到哈希: " + hash);
