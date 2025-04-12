@@ -1,4 +1,4 @@
-package com.systeminfos.algorithm;
+package com.systeminfos.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
